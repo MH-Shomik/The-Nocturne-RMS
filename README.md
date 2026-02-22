@@ -154,9 +154,14 @@ service cloud.firestore {
 
 ## Screenshots
 
-| Landing | Menu | Kitchen Display |
-|---|---|---|
-| *(add screenshot)* | *(add screenshot)* | *(add screenshot)* |
+### Landing Page
+![Landing Page](public/images/screenshot-landing.png)
+
+### Management Dashboard
+![Management Dashboard](public/images/screenshot-management.png)
+
+### Kitchen Display System
+![Kitchen Display System](public/images/screenshot-kitchen.png)
 
 ---
 
