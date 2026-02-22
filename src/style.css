@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased overflow-x-hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+@layer components {
+
+  /* Embers / Fire gradient effect */
+  .text-ember-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-red via-brand-orange to-brand-gold;
+  }
+
+  .bg-ember-gradient {
+    @apply bg-gradient-to-r from-brand-red via-brand-orange to-brand-gold;
+  }
+
+  /* Custom Cursor - Optional, will handle via React or keep simple */
+  .custom-cursor {
+    @apply fixed w-8 h-8 rounded-full pointer-events-none z-50 mix-blend-screen transition-transform duration-100 ease-out;
+    background: radial-gradient(circle, rgba(251, 191, 36, 0.5) 0%, rgba(234, 88, 12, 0) 70%);
+  }
+
+  /* Booking form custom reset */
+  .minimal-input {
+    @apply bg-transparent border-b border-white/20 px-0 py-2 focus:ring-0 focus:border-brand-orange text-white placeholder-white/50 transition-colors w-full rounded-none;
+  }
+
+  .minimal-select {
+    @apply bg-background border-b border-white/20 px-0 py-2 focus:ring-0 focus:border-brand-orange text-white w-full rounded-none appearance-none;
+  }
+}
+
+@layer components {
+  /* DietaryMenu page component classes */
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-gradient-to-r from-accent-gold to-accent-orange text-deep-black font-bold px-6 py-2.5 rounded-xl transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(251,191,36,0.35)] active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center border border-warm-brown/60 text-light-gray font-medium px-6 py-2.5 rounded-xl hover:bg-warm-brown/30 transition-all;
+  }
+
+  .card {
+    @apply bg-warm-brown/20 backdrop-blur-sm border border-white/10 rounded-xl;
+  }
+}
+
+@layer utilities {
+  .mix-blend-overlay {
+    mix-blend-mode: overlay;
+  }
+
+  .mix-blend-screen {
+    mix-blend-mode: screen;
+  }
+}
+
+/* Hide scrollbar for horizontal scrolling cards */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
